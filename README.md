@@ -2,4 +2,5 @@
 # Grzegorz Malinowski
 # 27.10.2022
 # 15:27
+# jest cieplo
 
