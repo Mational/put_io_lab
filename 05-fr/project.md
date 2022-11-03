@@ -16,10 +16,10 @@ Specyfikacja wymagań funkcjonalnych w ramach informatyzacji procesu sprzedaży 
 
 **Scenariusz główny:**
 1. [Sprzedający](#ac1) wystawia produkt na aukcję. ([UC1](#uc1))
-2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty. ([BR1](#br1))
+2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty. ([BR1](#br1)) ([UC2](#uc2))
 3. [Kupujący](#ac2) wygrywa aukcję ([BR2](#br2))
-4. [Kupujący](#ac2) przekazuje należność Sprzedającemu.
-5. [Sprzedający](#ac1) przekazuje produkt Kupującemu.
+4. [Kupujący](#ac2) przekazuje należność Sprzedającemu. ([UC3](#br3))
+5. [Sprzedający](#ac1) przekazuje produkt Kupującemu. ([UC4](#uc4), [UC5](#uc5), [UC6](#uc6)) 
 
 **Scenariusze alternatywne:** 
 
@@ -50,12 +50,16 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* ...
+* [UC4](#uc4): Uzyskanie danych adresowych od [Kupujący](#ac2)
+* [UC5](#uc5): Wynajęcie kuriera
+* [UC6](#uc6): Poinformowanie [Kupujący](#ac2) o nadaniu przesyłki
 
 [Kupujący](#ac2)
-* ...
+* [UC2](#uc2): Wzięcie udziału w licytacji
+* [UC3](#uc3): Dokonanie zapłaty za produkt
 
 ---
+
 <a id="uc1"></a>
 ### UC1: Wystawienie produktu na aukcję
 
@@ -77,17 +81,22 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2: Wzięcie udziału w licytacji
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. ...
+1. [Kupujacy](#ac2) zgłasza chęć udziału w licytacji
+2. System wyraża zgodę na udział [Kupujący](#ac2) w licytacji
+3. System prosi [Kupujący](#ac2) o podanie kwoty za licytowany towar
+4. [Kupujący](#ac2) podaje kwotę za licytowany towar
+5. System informuje [Kupujący](#ac2), że jego oferta jest aktualnie najwyższa
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+4.A. Podano kwotę niższą od aktualnie najwyższej oferty
+* 4.A.1. System informuje [Kupujący](#ac2) o błędnej ofercie
+* 4.A.2. Przejdź do kroku 3.
 
 ---
 
